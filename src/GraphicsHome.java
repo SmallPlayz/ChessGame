@@ -1,5 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class GraphicsHome {
 
@@ -8,6 +12,7 @@ public class GraphicsHome {
 
     JFrame frame;
     JLabel label;
+    JLabel labelHowToPlay;
     JButton buttonStart;
     JButton buttonHowToPlay;
     JButton buttonSettings;
@@ -27,6 +32,10 @@ public class GraphicsHome {
         label.setFont(new Font("Serif", Font.PLAIN, 50));
         label.setBounds(275, 5, 300, 70);
 
+        labelHowToPlay = new JLabel("How To Play:");
+        labelHowToPlay.setFont(new Font("Serif", Font.PLAIN, 50));
+        labelHowToPlay.setBounds(40, 40, 300, 70);
+
         buttonStart = new JButton("Start");
         buttonHowToPlay = new JButton("How To Play");
         buttonSettings = new JButton("Settings");
@@ -39,6 +48,18 @@ public class GraphicsHome {
         frame.add(buttonStart);
         frame.add(buttonHowToPlay);
         frame.add(buttonSettings);
+        frame.add(labelHowToPlay);
+
+        labelHowToPlay.setVisible(false);
+
+        buttonHowToPlay.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+                    labelHowToPlay.setVisible(true);
+                buttonStart.setVisible(false);
+                buttonHowToPlay.setVisible(false);
+                buttonSettings.setVisible(false);
+                }
+            });
 
         frame.setVisible(true);
     }
