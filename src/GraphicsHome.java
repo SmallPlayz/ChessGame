@@ -4,6 +4,22 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+
+import javax.swing.AbstractButton;
+import javax.swing.ButtonModel;
+import javax.swing.JFrame;
+import javax.swing.JToggleButton;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 
 public class GraphicsHome {
 
@@ -20,6 +36,9 @@ public class GraphicsHome {
     JButton buttonBack;
 
     JSlider sliderVolume;
+
+    static JLabel labelVolume;
+    static boolean goback = true; // NOT USED CURRENTLY
 
     GraphicsHome(int height, int width) {
         heightx = height;
@@ -57,12 +76,30 @@ public class GraphicsHome {
         buttonSettings.setBounds(287, 280, 225, 60);
         buttonBack.setBounds(325, 355, 150, 45);
 
-        sliderVolume = new JSlider(JSlider.HORIZONTAL, 0, 40, 10);
+        sliderVolume = new JSlider(JSlider.HORIZONTAL, 0, 100, 75);
         sliderVolume.setMinorTickSpacing(5);
         sliderVolume.setMajorTickSpacing(20);
-        sliderVolume.setPaintTicks(true);
         sliderVolume.setPaintLabels(true);
         sliderVolume.setLabelTable(sliderVolume.createStandardLabels(10));
+        sliderVolume.setBounds(50, 50, 225, 100);
+
+        labelVolume = new JLabel();
+        labelVolume.setText("Volume: " + sliderVolume.getValue());
+        labelVolume.setBounds(50, 200, 150, 45);
+        frame.add(labelVolume);
+
+        Thread threadVolume = new Thread(() -> {
+            while(true) {
+                labelVolume.setText("Volume: " + sliderVolume.getValue());
+                try {
+                    Thread.sleep(10);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        });
+
+        threadVolume.start();
 
         frame.add(label);
         frame.add(buttonStart);
@@ -76,6 +113,8 @@ public class GraphicsHome {
         labelHowToPlay.setVisible(false);
         labelSettings.setVisible(false);
         buttonBack.setVisible(false);
+        labelVolume.setVisible(false);
+        sliderVolume.setVisible(false);
 
         buttonHowToPlay.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
@@ -97,6 +136,9 @@ public class GraphicsHome {
                 label.setVisible(false);
                 labelSettings.setVisible(true);
                 buttonBack.setVisible(true);
+                labelVolume.setVisible(true);
+                sliderVolume.setVisible(true);
+                goback = false;
             }
         });
         buttonBack.addActionListener(new ActionListener(){
@@ -108,6 +150,9 @@ public class GraphicsHome {
                 label.setVisible(true);
                 labelSettings.setVisible(false);
                 buttonBack.setVisible(false);
+                labelVolume.setVisible(false);
+                sliderVolume.setVisible(false);
+                goback = true;
             }
         });
         frame.setVisible(true);
