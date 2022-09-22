@@ -91,6 +91,7 @@ public class GraphicsHome {
         Thread threadVolume = new Thread(() -> {
             while(true) {
                 labelVolume.setText("Volume: " + sliderVolume.getValue());
+                Main.playerVolume = Integer.parseInt(labelVolume.getText());
                 try {
                     Thread.sleep(10);
                 } catch (InterruptedException e) {
