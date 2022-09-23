@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f9725ef-ab10-4e4e-bb67-0f2ddb300fa0" name="Changes" comment="volume slider!!!!">
-      <change afterPath="$PROJECT_DIR$/src/GraphicsChess.java" afterDir="false" />
+    <list default="true" id="6f9725ef-ab10-4e4e-bb67-0f2ddb300fa0" name="Changes" comment="idek what i did lol">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GraphicsHome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GraphicsHome.java" afterDir="false" />
     </list>
@@ -81,7 +80,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663598092276</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="idek what i did lol">
+      <created>1663942407561</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1663942407561</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -99,6 +105,7 @@
     <MESSAGE value="made some button stuff" />
     <MESSAGE value="back button + icon" />
     <MESSAGE value="volume slider!!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="volume slider!!!!" />
+    <MESSAGE value="idek what i did lol" />
+    <option name="LAST_COMMIT_MESSAGE" value="idek what i did lol" />
   </component>
 </project>

@@ -34,6 +34,7 @@ public class GraphicsHome {
         frame.setSize(widthx,heightx);
         frame.setResizable(true);
         frame.setLayout(null);
+        frame.setResizable(false);
         frame.getContentPane().setBackground(Color.GRAY);
         frame.setIconImage(icon);
 
