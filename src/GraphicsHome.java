@@ -2,24 +2,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.BorderLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
-
-import javax.swing.AbstractButton;
-import javax.swing.ButtonModel;
-import javax.swing.JFrame;
-import javax.swing.JToggleButton;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
 
 public class GraphicsHome {
 
@@ -30,6 +12,7 @@ public class GraphicsHome {
     JLabel label;
     JLabel labelHowToPlay;
     JLabel labelSettings;
+    JLabel labelHowToPlayInfo;
     JButton buttonStart;
     JButton buttonHowToPlay;
     JButton buttonSettings;
@@ -62,6 +45,10 @@ public class GraphicsHome {
         labelHowToPlay.setFont(new Font("Serif", Font.PLAIN, 50));
         labelHowToPlay.setBounds(265, 5, 300, 70);
 
+        labelHowToPlayInfo = new JLabel("bro its just chess lol");
+        labelHowToPlayInfo.setFont(new Font("Serif", Font.PLAIN, 50));
+        labelHowToPlayInfo.setBounds(230, 75, 500, 50);
+
         labelSettings = new JLabel("Settings");
         labelSettings.setFont(new Font("Serif", Font.PLAIN, 50));
         labelSettings.setBounds(300, 5, 300, 70);
@@ -81,11 +68,12 @@ public class GraphicsHome {
         sliderVolume.setMajorTickSpacing(20);
         sliderVolume.setPaintLabels(true);
         sliderVolume.setLabelTable(sliderVolume.createStandardLabels(10));
-        sliderVolume.setBounds(50, 50, 225, 100);
+        sliderVolume.setBounds(250, 100, 225, 100);
+        sliderVolume.setBackground(Color.GRAY);
 
         labelVolume = new JLabel();
         labelVolume.setText("Volume: " + sliderVolume.getValue());
-        labelVolume.setBounds(50, 200, 150, 45);
+        labelVolume.setBounds(300, 200, 150, 45);
         frame.add(labelVolume);
 
         Thread threadVolume = new Thread(() -> {
@@ -106,6 +94,7 @@ public class GraphicsHome {
         frame.add(buttonHowToPlay);
         frame.add(buttonSettings);
         frame.add(labelHowToPlay);
+        frame.add(labelHowToPlayInfo);
         frame.add(labelSettings);
         frame.add(buttonBack);
         frame.getContentPane().add(sliderVolume);
@@ -115,7 +104,14 @@ public class GraphicsHome {
         buttonBack.setVisible(false);
         labelVolume.setVisible(false);
         sliderVolume.setVisible(false);
+        labelHowToPlayInfo.setVisible(false);
 
+        buttonStart.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+                frame.setVisible(false);
+                GraphicsChess graphicsChess = new GraphicsChess(450, 500);
+            }
+        });
         buttonHowToPlay.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 labelHowToPlay.setVisible(true);
@@ -125,6 +121,7 @@ public class GraphicsHome {
                 label.setVisible(false);
                 labelSettings.setVisible(false);
                 buttonBack.setVisible(true);
+                labelHowToPlayInfo.setVisible(true);
                 }
         });
         buttonSettings.addActionListener(new ActionListener(){
@@ -152,6 +149,7 @@ public class GraphicsHome {
                 buttonBack.setVisible(false);
                 labelVolume.setVisible(false);
                 sliderVolume.setVisible(false);
+                labelHowToPlayInfo.setVisible(false);
                 goback = true;
             }
         });
