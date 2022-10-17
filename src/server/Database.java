@@ -10,14 +10,14 @@ public class Database {
         Statement stmt = null;
         try {
             Class.forName("org.sqlite.JDBC");
-            c = DriverManager.getConnection("jdbc:sqlite:SqliteJavaDB.db");
+            c = DriverManager.getConnection("jdbc:sqlite:userData.db");
             System.out.println("Database Opened...\n");
             stmt = c.createStatement();
-            String sql = "CREATE TABLE Product " +
-                    "(p_id INTEGER PRIMARY KEY AUTOINCREMENT," +
-                    " p_name TEXT NOT NULL, " +
-                    " price REAL NOT NULL, " +
-                    " quantity INTEGER) " ;
+            String sql = """
+                    CREATE TABLE IF NOT EXISTS userinfo (
+                    	username text,
+                    	password text
+                    );""";
             stmt.executeUpdate(sql);
             stmt.close();
             c.close();
@@ -26,6 +26,6 @@ public class Database {
             System.err.println( e.getClass().getName() + ": " + e.getMessage() );
             System.exit(0);
         }
-        System.out.println("Table Product Created Successfully!!!");
+        System.out.println("Database Created Successfully.");
     }
 }

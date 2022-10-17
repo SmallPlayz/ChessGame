@@ -1,19 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f9725ef-ab10-4e4e-bb67-0f2ddb300fa0" name="Changes" comment="idk moved stuff">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/Database.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/ServerGraphics.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/ServerMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/sqlite-jdbc-3.30.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/server/testDatabsae.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="6f9725ef-ab10-4e4e-bb67-0f2ddb300fa0" name="Changes" comment="database stuff">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChessGame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ChessGame.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GraphicsHome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/GraphicsHome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/ClientMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chessicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/chessicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Database.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,18 +34,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/900ra/IdeaProjects/ChessGame/src/server/sqlite-jdbc-3.30.1.jar",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/900ra/IdeaProjects/ChessGame/src/server/sqlite-jdbc-3.30.1.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\900ra\IdeaProjects\ChessGame\src\server" />
@@ -63,9 +53,16 @@
       <recent name="C:\Users\10018879\IdeaProjects\ChessGame\src" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Database Test">
     <configuration name="Client" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="client.ClientMain" />
+      <module name="ChessGame" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Database Test" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="server.testDatabsae" />
       <module name="ChessGame" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -79,6 +76,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Database Test" />
       <item itemvalue="Application.Client" />
       <item itemvalue="Application.Server" />
     </list>
@@ -113,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663846947399</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="database stuff">
+      <created>1665967551634</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1665967551634</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -132,6 +137,7 @@
     <MESSAGE value="back button + icon" />
     <MESSAGE value="volume stuff" />
     <MESSAGE value="idk moved stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="idk moved stuff" />
+    <MESSAGE value="database stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="database stuff" />
   </component>
 </project>
