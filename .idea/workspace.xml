@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f9725ef-ab10-4e4e-bb67-0f2ddb300fa0" name="Changes" comment="idek what i did lol">
+    <list default="true" id="6f9725ef-ab10-4e4e-bb67-0f2ddb300fa0" name="Changes" comment="grwoiugrwikh">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GraphicsHome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GraphicsHome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GraphicsChess.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GraphicsHome.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chessicon.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,26 +33,50 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/10018879/IdeaProjects/ChessGame/src/server/sqlite-jdbc-3.30.1.jar",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\10018879\IdeaProjects\ChessGame" />
       <recent name="C:\Users\10018879\IdeaProjects\ChessGame\src" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.databse">
     <configuration name="Main" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+      <option name="MAIN_CLASS_NAME" value="client.ClientMain" />
       <module name="ChessGame" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="databse" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="server.testDatabsae" />
+      <module name="ChessGame" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="severer" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="server.ServerMain" />
+      <module name="ChessGame" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.severer" />
+      <item itemvalue="Application.databse" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -87,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663942407561</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="grwoiugrwikh">
+      <created>1663943967314</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1663943967314</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -106,6 +141,7 @@
     <MESSAGE value="back button + icon" />
     <MESSAGE value="volume slider!!!!" />
     <MESSAGE value="idek what i did lol" />
-    <option name="LAST_COMMIT_MESSAGE" value="idek what i did lol" />
+    <MESSAGE value="grwoiugrwikh" />
+    <option name="LAST_COMMIT_MESSAGE" value="grwoiugrwikh" />
   </component>
 </project>
